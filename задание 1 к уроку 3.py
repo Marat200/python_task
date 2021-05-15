@@ -1,13 +1,9 @@
-i1 = float(input('Input first digit: '))
-i2 = float(input('Input second digit: '))
-
-
-def division(a1, a2):
-    if a2 == 0:
-        print('Division by zero error!!!')
-    else:
-        a = a1 / a2
-        print(round(a, 3))
-
-
-division(i1, i2)
+result = {}
+for n in range(2, 10):
+    result[n] = []
+    for f in range(2, 100):
+        if f % n == 0:
+            result[n].append(f)
+    print(
+        f'Для числа {n} кратны - {len(result[n])}. Кратные числа: {result[n]}.'
+        )

@@ -1,7 +1,13 @@
-def data(name, surname, year, city, email, phone):
-    print(
-        f'Name: {name}; Surname: {surname}; Birth year: {year};'
-        f'City of living: {city}; Email: {email}; Phone number: {phone}')
+import random
 
+LST_LEN = 10
 
-data(name='Bruce', surname='Wayne', year=1978, city='Gotham City', email='brucewayne@gmail.com', phone='+79354466000')
+num_lst = [random.randint(0, 11) for _ in range(LST_LEN)]
+even_num = []
+
+for i in range(LST_LEN):
+    if num_lst[i] % 2 == 0:
+        even_num.append(i + 1)
+
+print(f'Базовый массив\n{num_lst}')
+print(f'Массив идексов четных чисел\n{even_num}')

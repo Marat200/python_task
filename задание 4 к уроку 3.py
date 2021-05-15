@@ -1,18 +1,11 @@
-def my_func(x, y):
-    z = x ** y
-    return z
+import random
 
+r = [random.randint(0, 99) for _ in range(100)]
+print(f'Массив: {r}')
 
-out = my_func(2, -2)
-print(out)
+max_index = 0
+for i in r:
+    if r.count(max_index) < r.count(i):
+        max_index = r.index(i)
 
-
-def my_func2(x, y):
-    z = 1
-    for i in range(abs(y)):
-        z *= x
-    return 1 / z
-
-
-out2 = my_func2(2, -2)
-print(out2)
+print(f'Число {r[max_index]}, встречается {r.count(max_index)} раза')
